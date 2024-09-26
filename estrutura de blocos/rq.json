@@ -1,0 +1,12 @@
+{
+    "id_bloco": "RQ0001",
+    "identificador": "RQ1",
+    "id_bloco_anterior": "MS0001",
+    "url": "www.google.com",
+    "method": "POST",
+    "set_vars": [{
+        "nome": "",
+        "value": null
+    }],
+    "get_vars": []
+}

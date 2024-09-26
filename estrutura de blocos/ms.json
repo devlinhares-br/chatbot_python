@@ -1,0 +1,9 @@
+{
+    "id_bloco": "MS0001",
+    "identificador": "MSG",
+    "id_bloco_anterior": "MS0000",
+    "mensagens": ["Uma lista de mensagens","Podem serem adicionadas"],
+    "proximo_bloco": "OP0001",
+    "system_message": "N",
+    "aguarde": true
+}

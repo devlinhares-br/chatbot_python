@@ -1,0 +1,29 @@
+[
+{"id_bloco": "START", "proximo_bloco": "MS0001", "identificador": "STT"},
+{"id_bloco": "MS0001", "identificador": "MSG" , "id_bloco_anterior": "START", "mensagens":["Olá! Sou a assistente virtual da Uniodonto Campinas!", "Tudo pronto para começar?","Para iniciarmos seu atendimento, por favor, digite o seu nome e sobrenome."], "proximo_bloco": "GT0001", "system_message": "N", "aguarde":true},
+{"id_bloco": "GT0001", "identificador": "GET", "id_bloco_anterior": "MS0001", "var_name": "nome", "regex": null, "mensagem_invalido": "Ops! Não foi possivel capturar o que você digitou!", "proximo_bloco": "GD0001"},
+
+
+{"id_bloco": "GD0001", "identificador": "GDF" , "id_bloco_anterior": "GT0001", "var_name": "protocolo", "field":"UF_CRM_1725921049","proximo_bloco": "MS0004", "system_message": "Y", "aguarde":false},
+
+
+{"id_bloco": "MS0004", "identificador": "MSG" , "id_bloco_anterior": "MS0003", "mensagens":["O numero do seu protocolo é: {{protocolo}}","{{nome}}, com qual setor gostaria de falar?", "Digite o numero referente a sua escolha: \n1 - SAC \n2 - Comercial \n3 - Financeiro"], "proximo_bloco": "OP0002", "system_message": "N", "aguarde":true},
+{"id_bloco": "OP0002", "identificador": "OPC", "id_bloco_anterior": "MS0004", "mensagem_erro": "Ops! a opção selecionada inválida!", "opcoes": {"1": "TR0001", "2": "TR0002", "3": "TR0003"}},
+
+{"id_bloco": "TR0001", "identificador": "TRS", "id_bloco_anterior": "OP0002", "is_user": false, "to_id": 3, "mensagem": "Certo, aguarde um momento que alguem do time do SAC irá te atender!", "proximo_bloco": "MC0003"},
+{"id_bloco": "MC0003", "identificador": "MCD", "id_bloco_anterior": "TR0001", "pipe": 0, "etapa": "NEW", "proximo_bloco": "END001"},
+
+
+{"id_bloco": "END001", "id_bloco_anterior": "TR0001", "identificador": "END", "encerra_conversa_bitrix": false},
+
+{"id_bloco": "TR0002", "identificador": "TRS", "id_bloco_anterior": "OP0002", "is_user": false, "to_id": 3, "mensagem": "Aguarde um momento que alguem do time do Comercial irá te atender!", "proximo_bloco": "MC0001"},
+
+{"id_bloco": "MC0001", "identificador": "MCD", "id_bloco_anterior": "TR0002", "pipe": 1, "etapa": "NEW", "proximo_bloco": "END002"},
+
+{"id_bloco": "END002", "id_bloco_anterior": "TR0002", "identificador": "END", "encerra_conversa_bitrix": false},
+
+{"id_bloco": "TR0003", "identificador": "TRS", "id_bloco_anterior": "OP0002", "is_user": false, "to_id": 3, "mensagem": "Um momento que financeiro irá te atender!", "proximo_bloco": "MC0002"},
+
+{"id_bloco": "MC0002", "identificador": "MCD", "id_bloco_anterior": "TR0003", "pipe": 3, "etapa": "NEW", "proximo_bloco": "END003"},
+{"id_bloco": "END003", "id_bloco_anterior": "TR0003", "identificador": "END", "encerra_conversa_bitrix": false}
+]

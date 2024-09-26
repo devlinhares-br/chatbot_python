@@ -1,0 +1,9 @@
+{
+    "id_bloco": "TR0001",
+    "identificador": "TRS",
+    "id_bloco_anterior": "OP0001",
+    "is_user": false,
+    "to_id": 123,
+    "mensagem": "Uma mensagem de despedida!",
+    "proximo_bloco": "END001"
+}

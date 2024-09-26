@@ -1,0 +1,11 @@
+{
+    "id_bloco": "OP0001",
+    "identificador": "OPC",
+    "id_bloco_anterior": "OP0000",
+    "mensagem_erro": "Opa! Mensagem inválida!",
+    "opcoes": {
+        "1": "MS0001",
+        "2": "MS0002"
+    }
+
+}

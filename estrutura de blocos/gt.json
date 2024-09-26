@@ -1,0 +1,10 @@
+{
+    "id_bloco": "GT0001",
+    "identificador": "GET",
+    "id_bloco_anterior": "MS0001",
+    "var_name": "nome",
+    "regex": "[\\d]",
+    "mensagem_invalido": ["Lista de mensagens"],
+    "proximo_bloco": "MS0002",
+    "update": false
+}
