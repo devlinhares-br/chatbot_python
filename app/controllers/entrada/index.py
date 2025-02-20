@@ -3,9 +3,6 @@ from flask import request, jsonify
 from app.models.bitrix.DataMessage import DataMessage
 from app.controllers.bot import Bot
 from app.models.banco.arvore import Arvore
-from app.models.banco.conversas import Conversas
-from app.models.bitrix.bitrix import Bitrix
-from time import sleep
 import json
 
 @app.route('/controlador', methods=['POST'])
