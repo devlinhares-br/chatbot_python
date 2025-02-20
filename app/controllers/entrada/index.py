@@ -2,7 +2,6 @@ from app import app, db
 from flask import request, jsonify
 from app.models.bitrix.DataMessage import DataMessage
 from app.controllers.bot import Bot
-from app.models.banco.motivos import Motivos
 from app.models.banco.arvore import Arvore
 from app.models.banco.conversas import Conversas
 from app.models.bitrix.bitrix import Bitrix
