@@ -4,11 +4,9 @@ from app.services.tratamentos.tratamentos import *
 import requests, re
 
 class Bitrix():
-    __BASE_URL = 'https://b24-xyu0fb.bitrix24.com.br/rest/9/ne0pa14bhqavrnd5/'
-    __CODE_ID = 'a7rh5qv5u7471y21'
-    __CLIENT_ID = '8iqtzzk9q9aghsiy6sqn54j6fkyw1s38'
-    __BOT_ID = '15'
-
+    __BASE_URL = 'https://seu.bitrix24.com/rest/id/*******/'
+    __CLIENT_ID = 'client_id'
+    __BOT_ID = 'bot_id'
     __METODOS = {
         'message_add': 'imbot.message.add.json/',
         'session_finish': 'imopenlines.bot.session.finish.json/',
@@ -131,15 +129,17 @@ class Bitrix():
         response = self.__requests(self.__METODOS['crm_chat_get'], raw)
         return response
     
-    def move_card(self, id, pipe= 0):
+    def move_card(self, id, pipe= 172):
         raw = {
             "DOCUMENT_ID": ["crm", "CCrmDocumentDeal", f"DEAL_{id}"],
-            "TEMPLATE_ID": 43,
+            "TEMPLATE_ID": 2406,
             "PARAMETERS": {
                 "pipe": pipe
             }
         }
+        print(raw)
         response = self.__requests(self.__METODOS['workflow_ex'], raw)
+        print(response)
         return response
     
     def get_card(self, id):

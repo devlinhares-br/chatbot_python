@@ -18,6 +18,7 @@ class Mc():
         return self.proximo_bloco
 
     def execute(self, chat_id, dialog_id, **kw):
+        print(kw.get('deal', 0))
         if kw.get('deal', 0):
             self.__move_card(kw.get('deal', 0))
         return self.get_proximo_bloco()

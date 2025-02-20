@@ -5,9 +5,7 @@ from app.models.blocos.gt import Gt
 from app.models.blocos.op import Op
 from app.models.blocos.tr import Tr
 from app.models.blocos.vr import Vr
-from app.models.blocos.mt import MT
 from app.models.blocos._if import IF
-from app.models.blocos.ao import Ao
 from app.models.blocos.ed import Ed
 from app.models.blocos.mc import Mc
 from app.models.blocos.gd import Gd
@@ -49,9 +47,7 @@ class Arvore(db.Model):
             'OPC': Op(bloco.get('id_bloco',''), bloco.get('identificador',''), bloco.get('id_bloco_anterior',''), bloco.get('mensagem_erro'), bloco.get('opcoes')),
             'TRS': Tr(bloco.get('id_bloco',''), bloco.get('identificador',''), bloco.get('id_bloco_anterior',''), bloco.get('is_user'), bloco.get('to_id'), bloco.get('mensagem'),bloco.get('proximo_bloco')),
             'VR':  Vr(bloco.get('id_bloco',''), bloco.get('identificador',''), bloco.get('id_bloco_anterior',''), bloco.get('proximo_bloco',''), bloco.get('var_name',''), bloco.get('var_value','')),
-            'MT':  MT(bloco.get('id_bloco',''), bloco.get('identeficador',''), bloco.get('id_bloco_anterior',''), bloco.get('proximo_bloco', '')),
             'IF':  IF(bloco.get('id_bloco',''), bloco.get('identificador',''), bloco.get('id_bloco_anterior',''), bloco.get('verdadeiro',''), bloco.get('falso','')),
-            'AO':  Ao(bloco.get('id_bloco',''), bloco.get('identificador',''), bloco.get('id_bloco_anterior',''), bloco.get('proximo_bloco','')),
             'END': Ed(bloco.get('id_bloco',''), bloco.get('identificador',''), bloco.get('id_bloco_anterior',''), bloco.get('encerra_conversa_bitrix',False)),
             'MCD': Mc(bloco.get('id_bloco', ''), bloco.get('identificador',''), bloco.get('id_bloco_anterior',''), bloco.get('pipe', ''), bloco.get('etapa', ''), bloco.get('proximo_bloco','')),
             'GDF': Gd(bloco.get('id_bloco', ''), bloco.get('identificador',''), bloco.get('id_bloco_anterior',''), bloco.get('var_name', ''), bloco.get('field', ''), bloco.get('proximo_bloco',''))

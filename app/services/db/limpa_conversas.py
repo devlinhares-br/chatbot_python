@@ -76,12 +76,10 @@ class Ausencia():
     def run(self):
         while True:
             with app.app_context():
-                sleep(timedelta(minutes=20).seconds)
+                sleep(timedelta(minutes=2).seconds)
                 if self.delet_conversas():
                     print('ok')
-                else:
-                    print('ko')
-                self.send_message()
+
                 
 
     def init_task(self):
